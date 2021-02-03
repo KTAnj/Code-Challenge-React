@@ -1,0 +1,23 @@
+@mixin app-toggle-btn($btn-bg,$btn-color, $active-bg, $active-color) {
+    background-color: $btn-bg;
+    color: $btn-color;
+    border: 0.4px solid $btn_border_color;
+    &.active {
+        background-color: $active-bg !important;
+        color: $active-color !important;
+    }
+  }
+
+  @mixin app-btn($btn-bg, $btn-color, $border-color) {
+    background-color: $btn-bg;
+    color: $btn-color;
+    border: 0.5px solid $border-color;
+
+    &:hover{
+        color: $btn-color !important;
+    }
+  }
+
+  @mixin app-icon($color) {
+      color: $color;
+  }

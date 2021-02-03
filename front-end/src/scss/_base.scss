@@ -1,0 +1,148 @@
+.app-dashboard{
+    nav{
+        background: $nav_bar_background_color;
+        .navbar-brand{
+            .logo {
+                width: 40px
+            }
+        }
+        .app-toggle-btn {
+            @include app-toggle-btn($nav_bar_background_color, white, white, $nav_bar_background_color)
+        }
+        .profileimg{
+            position: relative;
+
+            img {
+                border-radius: 50%;
+                display: inline-block;
+                width: 42px;
+                height: 42px;
+                margin-right: 15px;
+            }
+            .badge {
+                top: -4px;
+                right: 10px;
+                position: absolute;
+                border-radius: 1em;
+                background: #1d9de8 !important;
+                color: white;
+            }
+        }
+
+    }
+    .left-sider {
+        background: $sider_bg_color;
+        min-height: 100vh;
+        min-width: 260px;
+
+        .slider-item {
+            padding-top: 31px;
+        }
+        ul{
+            padding: 0;
+            list-style-type: none;
+        }
+        .item-header {
+            color: $sider_header_color;
+        }
+        hr {
+            background: #272A2D;
+            margin-bottom: 0;
+        }
+    }
+    .page {
+        background: $page_content_bg_color;
+        min-height: 100vh;
+
+        .app-toggle-btn {
+            @include app-toggle-btn($page_content_bg_color,$sider_header_color , $sider_header_color, $page_content_bg_color)
+        }
+        .filter-input-label {
+            color: #666E79;
+        }
+        .filter-dropdown {
+            color: white;
+            border: 0.5px solid $btn_border_color;
+        }
+    }
+}
+
+.app-icon-default {
+    @include app-icon($icon_defaul_color)
+}
+.app-icon-green {
+    @include app-icon($nav_bar_background_color)
+}
+.app-btn-default {
+    @include app-btn($button_defaul_bg, $button_defaul_color, $icon_defaul_border)
+}
+.app-btn-white {
+    @include app-btn(white, black, white)
+}
+.app-btn-green {
+    @include app-btn($sider_header_color, black, $sider_header_color)
+}
+.app-btn-green-outline{
+    @include app-btn($sider_bg_color, $sider_header_color, $sider_header_color)
+}
+.m-auto {
+    margin: auto;
+}
+.content {
+    font-weight: 500;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    &.content-f-18 {
+        font-size: 18px;
+    }
+    &.content-f-12 {
+        font-size: 12px;
+    }
+    &.content-f-20 {
+        font-size: 20px;
+    }
+}
+.content-header {
+    @extend .content;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 12px;
+    color: #666E79;
+}
+.content-link {
+    @extend .content;
+    color: #666E79;
+
+    &.active {
+        color: black;
+        background: $sider_header_color;
+        border-radius: 4px
+    }
+}
+
+.grid{
+    .grid-row {
+        border: 0.5px solid $btn_border_color;
+        border-radius: 4px;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+
+        .title{
+            border-right: 0.5px dashed $btn_border_color;
+            width: 23%;
+        }
+    }
+}
+
+.error-tag {
+    border: 0.5px solid $btn_border_color;
+    border-radius: 4px;
+    padding: 20px;
+    width: 100%;
+    p {
+        color: white;
+    }
+}
